@@ -9,7 +9,7 @@ aniTitle = setInterval(function () {
     newtitle = (counter == 0) ? "" : Title.slice(0, counter);
     document.title =  '' + newtitle;
     if (document.title == '') {
-      document.title = 'd'
+      document.title = 'stacker'
     }
 }, 400)
 
