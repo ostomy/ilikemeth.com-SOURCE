@@ -1,5 +1,5 @@
 let counter = 0;
-let Title = 'ilikemeth.com >.<';
+let Title = 'ilikemeth.com';
 let direction = true;
 
 aniTitle = setInterval(function () {
