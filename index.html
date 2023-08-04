@@ -30,5 +30,147 @@
     <script src=cursor.js></script>
     <script src=funny.js></script>
     <script src=snow.js></script>
-    
+
+    <script>
+        var discordi = 0;
+        var discord = '[discord] ';
+        var discordc = false;
+
+        var youtubei = 0;
+        var youtube = '[youtube] ';
+        var youtubec = false;
+
+        var membersi = 0;
+        var members = '[members] ';
+        var membersc = false;
+
+        var invitei = 0;
+        var invite = '[invite]';
+
+        var speed = 100;
+
+        function DiscordTypeWriter() {
+            if (discordi < discord.length) {
+                document.getElementById("discord").innerHTML += discord.charAt(discordi);
+                discordi++;
+                if (discordi == 10) {
+                    discordc = true;
+                    YoutubeTypeWriter()
+                }
+                setTimeout(DiscordTypeWriter, speed);
+            }
+        }
+
+        function YoutubeTypeWriter() {
+            if (discordc) {
+                if (youtubei < youtube.length) {
+                    document.getElementById("youtube").innerHTML += youtube.charAt(youtubei);
+                    youtubei++;
+                    if (youtubei == 10) {
+                        youtubec = true;
+                        MembersTypeWriter()
+                    }
+                    setTimeout(YoutubeTypeWriter, speed);
+                }
+            }
+        }
+
+        function MembersTypeWriter() {
+            if (youtubec) {
+                if (membersi < members.length) {
+                    document.getElementById("members").innerHTML += members.charAt(membersi);
+                    membersi++;
+                    if (membersi == 10) {
+                        membersc = true;
+                        InviteTypeWriter()
+                    }
+                    setTimeout(MembersTypeWriter, speed);
+                }
+            }
+        }
+
+        function InviteTypeWriter() {
+            if (membersc) {
+                if (invitei < invite.length) {
+                    document.getElementById("invite").innerHTML += invite.charAt(invitei);
+                    invitei++;
+                    setTimeout(InviteTypeWriter, speed);
+                }
+            }
+        }
+    </script>
+
+    <body oncontextmenu="">
+        <input autocomplete=off id=overlay-toggle type=checkbox>
+        <div class="fullscreen overlay">
+            <div id=center>
+                <label for=overlay-toggle onclick=audioPlay(),DiscordTypeWriter()>
+                    <div id=enter>
+                        <b class="begin rainbow">[wsg brodie click]</b>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <video autoplay loop muted controls webkit-playsinline playsinline class="fullscreen bg-video">
+            <source src="main/assets/video/yeat.flv.mp4" type="video/mp4">
+        </video>
+
+        <audio id=audio loop preload=auto>
+            <source src="main/assets/audio/GOUT.mp3" type=audio/mp3>
+        </audio>
+
+        <style>
+            @font-face {
+                font-family: Modeseven;
+                src: url(assets/css/modes.ttf) format('truetype')
+            }
+
+            #center h1 {
+                font-size: 51px;
+                font-family: Modeseven;
+                text-shadow: 0 0 .4em #070707
+            }
+        </style>
+
+        <div class=snowflakes>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+        </div>
+
+        <div id=center>
+            <hr style="height:30pt; visibility:hidden;" />
+
+            <h1>
+                <span class=neonText>fags.lol</span>
+            </h1>
+
+            <div>
+                <a id=discord href="https://discord.gg/links"
+                    style="font-size:20px;font-family:'Roboto Mono',monospace;text-shadow:0 0 .1em #fff">
+                </a>
+                <a id=youtube href="https://www.youtube.com/ja-pan"
+                    style="font-size:20px;font-family:'Roboto Mono',monospace;text-shadow:0 0 .1em #fff">
+                </a>
+            </div>
+
+            <hr style="height:5pt; visibility:hidden;" />
+
+            <div>
+                <a id=members href="https://fags.lol/members"
+                    style="font-size:20px;font-family:'Roboto Mono',monospace;text-shadow:0 0 .1em #fff">
+                </a>
+                <a id=invite href="https://fags.lol/invite"
+                    style="font-size:20px;font-family:'Roboto Mono',monospace;text-shadow:0 0 .1em #fff">
+                </a>
+            </div>
+        </div>
 </html>
