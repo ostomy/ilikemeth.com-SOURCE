@@ -69,8 +69,8 @@ const SEARCHES = [
 ]
 
 const VIDEOS = [
-  'albundy.mp4',
-  'badger.mp4',
+  'thedanceydance.mp4',
+  'video0.mp4',
   'cat.mp4',
   'hasan.mp4',
   'heman.mp4',
@@ -82,8 +82,8 @@ const VIDEOS = [
 ]
 
 const FILE_DOWNLOADS = [
-  'cat-blue-eyes.jpg',
-  'cat-ceiling.jpg',
+  'globalwarningmyass.jpg',
+  'snowwhite.jpg',
   'cat-crosseyes.jpg',
   'cat-cute.jpg',
   'cat-hover.jpg',
