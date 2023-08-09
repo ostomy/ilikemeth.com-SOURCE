@@ -1,18 +1,3 @@
-<!doctype html>
-
-<!--
-  The Annoying Site
-  https://theannoyingsite.com
-
-  Author:
-    Feross Aboukhadijeh
-    https://feross.org
-
-  Patreon:
-    If you enjoyed this, please support me on Patreon!
-    https://www.patreon.com/feross
--->
-
 <html>
 <head>
   <meta charset='UTF-8'>
@@ -69,17 +54,10 @@
 
 <template>
   <div class='hello-message'>
-    <script>
-        function getIP(json) {
-            document.getElementById("ipAddress").textContent = json.ip;
-        }
-    </script>
-    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-</head>
-<body>
-    <h1>Your IP Address:</h1>
-    <p id="ipAddress">Loading...</p>
-    
+    <h1>Hi there!</h1>
+    <h2>To get started, HOLD DOWN the space key for 3 seconds.</h2>
+    <h3>(or, on mobile, tap the cat!)</h3>
+
     <img src='/cat-cute.jpg' alt='Cute cat' />
   </div>
   <div class='logout-messages'></div>
